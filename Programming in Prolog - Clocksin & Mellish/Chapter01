@@ -1,0 +1,61 @@
+%% Chapter 1
+
+%% Chapter Practice
+%% Consider the following database:
+thief(john).
+
+likes(mary, chocolate).
+likes(mary, wine).
+likes(john, X) :- likes(X, wine).
+
+%% Write the following rule in Prolog: 
+%% _a person may steal something if the person is a thief and the person likes the thing._
+
+%% Chapter Exercises
+%% Exercise 1.3 This exercise has been inspired by one in Robert Kowalski's book 
+% _Logic for problem-solving_, published in 1979. 
+% Suppose someone has already written Prolog clauses that define the following relationships:
+male(albert).
+male(edward).
+male(great_albert).
+male(little_edward).
+
+female(alice).
+female(victoria).
+
+father(great_albert, albert).
+father(albert, edward).
+father(albert, alice).
+father(edward, little_edward).
+
+mother(victoria, edward).
+mother(victoria, alice).
+
+parent(X, Y) :- father(X, Y).
+parent(X, Y) :- mother(X, Y).
+
+% The exercise is to write Prolog clauses to define the following relationships:
+% is_mother(X)
+% is_father(X)
+% is_son(X)
+% sister_of(X, Y)
+% grandpa_of(X, Y)
+% sibling(X, Y)
+
+/* X is a mother */
+/* X is a father * /
+/* X is a son * /
+/* X is a sister of Y * /
+/* X is a grandfather of Y * /
+/* X is a sibling of Y */
+
+% For example, we could write a rule for aunt, provided we were supplied with (or
+% wrote) rules for female, sibling, and parent.
+
+aunt(X, Y) : - female(X), sibling(X, Z), parent(2, Y).
+
+% This could also be written:
+
+aunt(X, Y) : - sister_of(X, Z), parent(Z, Y).
+
+% provided that we wrote the sister of rule
