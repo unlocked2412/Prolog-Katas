@@ -1,20 +1,21 @@
-%% Chapter 1
+% Chapter 1
 
-%% Chapter Practice
-%% Consider the following database:
+% Chapter Practice
+% Consider the following database:
 thief(john).
 
 likes(mary, chocolate).
 likes(mary, wine).
 likes(john, X) :- likes(X, wine).
 
-%% Write the following rule in Prolog: 
-%% _a person may steal something if the person is a thief and the person likes the thing._
+% Write the following rule in Prolog: 
+% _a person may steal something if the person is a thief and the person likes the thing._
 
-%% Chapter Exercises
-%% Exercise 1.3 This exercise has been inspired by one in Robert Kowalski's book 
+% Chapter Exercises
+% Exercise 1.3 This exercise has been inspired by one in Robert Kowalski's book 
 % _Logic for problem-solving_, published in 1979. 
 % Suppose someone has already written Prolog clauses that define the following relationships:
+
 male(albert).
 male(edward).
 male(great_albert).
@@ -35,6 +36,7 @@ parent(X, Y) :- father(X, Y).
 parent(X, Y) :- mother(X, Y).
 
 % The exercise is to write Prolog clauses to define the following relationships:
+% 
 % is_mother(X)
 % is_father(X)
 % is_son(X)
