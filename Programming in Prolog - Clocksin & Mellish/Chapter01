@@ -60,4 +60,4 @@ aunt(X, Y) : - female(X), sibling(X, Z), parent(2, Y).
 
 aunt(X, Y) : - sister_of(X, Z), parent(Z, Y).
 
-% provided that we wrote the sister of rule
+% provided that we wrote the `sister_of` rule.
