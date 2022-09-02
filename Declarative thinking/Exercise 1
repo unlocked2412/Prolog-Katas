@@ -1,0 +1,14 @@
+% Facts
+male(harry).
+male(john).
+male(william).
+
+big(elephant).
+dangerous(lion).
+
+likes(william, elephant).
+likes(william, lion).
+
+% Write the following rule in Prolog:
+% A person is a `leader` if all of his subordinates are reckless.
+% A person is reckless is he likes at least two big and dangerous animals.
